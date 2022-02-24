@@ -74,8 +74,8 @@ void CGeometryShader::initFBO()
 
 	QOpenGLShader* m_vertexShader = new QOpenGLShader(QOpenGLShader::Vertex);
 	QOpenGLShader* m_fragmentShader = new QOpenGLShader(QOpenGLShader::Fragment);
-	m_vertexShader->compileSourceFile("shader/1.vertex_GeometryShader_fbo.vert");
-	m_fragmentShader->compileSourceFile("shader/1.fragment_GeometryShader_fbo.frag");
+	m_vertexShader->compileSourceFile("1.vertex_GeometryShader_fbo.vert");
+	m_fragmentShader->compileSourceFile("1.fragment_GeometryShader_fbo.frag");
 	m_pProgramFBO->addShader(m_vertexShader);
 	m_pProgramFBO->addShader(m_fragmentShader);
 	m_pProgramFBO->link();
@@ -120,8 +120,8 @@ void CGeometryShader::initializeGL()
 
 	QOpenGLShader* vertexShader = new QOpenGLShader(QOpenGLShader::Vertex);
 	QOpenGLShader* fragmentShader = new QOpenGLShader(QOpenGLShader::Fragment);
-	vertexShader->compileSourceFile("shader/1.vertex_GeometryShader.vert");
-	fragmentShader->compileSourceFile("shader/1.fragment_GeometryShader.frag");
+	vertexShader->compileSourceFile("1.vertex_GeometryShader.vert");
+	fragmentShader->compileSourceFile("1.fragment_GeometryShader.frag");
 	m_pProgram->addShader(vertexShader);
 	m_pProgram->addShader(fragmentShader);
 	m_pProgram->link();
